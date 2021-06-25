@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- https://www.phpflow.com/php/datatables-example-server-side-processing-with-php/ -->
+	<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+ 
+<!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+ 
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+</head>
+<body>
+ <div class="">
+		<table id="example" class="display" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Empid</th>
+                <th>Name</th>
+				<th>Salary</th>
+               
+            </tr>
+        </thead>
+ 
+        <tfoot>
+            <tr>
+               <th>Empid</th>
+                <th>Name</th>
+				<th>Salary</th>
+                
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+
+
+<script>
+$( document ).ready(function() {
+$('#example').dataTable({
+				 "bProcessing": true,
+                 "sAjaxSource": "response.php",
+				 "aoColumns": [
+						{ mData: 'Empid' } ,
+                        { mData: 'Name' },
+                        { mData: 'Salary' }
+                ]
+        });   
+});
+</script>
+
+
+
+
+</body>
+</html>
