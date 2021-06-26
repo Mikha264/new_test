@@ -1,0 +1,99 @@
+Microsoft Windows [Version 6.1.7601]
+(c) Корпорация Майкрософт (Microsoft Corp.), 2009. Все права защищены.
+
+d:\ProgramFiles\Git>cd new
+
+d:\ProgramFiles\Git\new>git clone https://github.com/Mikha264/new_test.git
+Cloning into 'new_test'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 612 bytes | 3.00 KiB/s, done.
+
+d:\ProgramFiles\Git\new>cd..
+
+d:\ProgramFiles\Git>git config --global core.editor "atom --wait"
+
+d:\ProgramFiles\Git>git config --global core.editor "atom --wait"
+
+d:\ProgramFiles\Git>cd new
+
+d:\ProgramFiles\Git\new>dir
+ Том в устройстве D имеет метку DATA
+ Серийный номер тома: 1E98-310C
+
+ Содержимое папки d:\ProgramFiles\Git\new
+
+25.06.2021  13:40    <DIR>          .
+25.06.2021  13:40    <DIR>          ..
+25.06.2021  13:40    <DIR>          new_test
+               0 файлов              0 байт
+               3 папок  385 017 040 896 байт свободно
+
+d:\ProgramFiles\Git\new>cd new_test
+
+d:\ProgramFiles\Git\new\new_test>dir
+ Том в устройстве D имеет метку DATA
+ Серийный номер тома: 1E98-310C
+
+ Содержимое папки d:\ProgramFiles\Git\new\new_test
+
+25.06.2021  13:40    <DIR>          .
+25.06.2021  13:40    <DIR>          ..
+25.06.2021  13:40                10 README.md
+               1 файлов             10 байт
+               2 папок  384 948 359 168 байт свободно
+
+d:\ProgramFiles\Git\new\new_test>dir
+ Том в устройстве D имеет метку DATA
+ Серийный номер тома: 1E98-310C
+
+ Содержимое папки d:\ProgramFiles\Git\new\new_test
+
+25.06.2021  14:00    <DIR>          .
+25.06.2021  14:00    <DIR>          ..
+25.06.2021  14:04               147 index.html
+25.06.2021  13:40                10 README.md
+               2 файлов            157 байт
+               2 папок  384 527 654 912 байт свободно
+
+d:\ProgramFiles\Git\new\new_test>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+d:\ProgramFiles\Git\new\new_test>git add index.html
+
+d:\ProgramFiles\Git\new\new_test>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+
+d:\ProgramFiles\Git\new\new_test>git commit -m "add index.html"
+[main 720a2b6] add index.html
+ 1 file changed, 7 insertions(+)
+ create mode 100644 index.html
+
+d:\ProgramFiles\Git\new\new_test>git push
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': Mikha264
+Password for 'https://Mikha264@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 391 bytes | 391.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Mikha264/new_test.git
+   2d61cc1..720a2b6  main -> main
+
+d:\ProgramFiles\Git\new\new_test>
